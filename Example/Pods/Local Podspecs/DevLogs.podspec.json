@@ -2,8 +2,8 @@
   "name": "DevLogs",
   "version": "0.1.0",
   "summary": "A short description of DevLogs.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/nordsmallcountry/DevLogs",
+  "description": "A short description of DevLogs.",
+  "homepage": "https://github.com/it-machine/DevLogs-iOS",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "nordsmallcountry": "as@it-machine.ru"
   },
   "source": {
-    "git": "https://github.com/nordsmallcountry/DevLogs.git",
+    "git": "https://github.com/it-machine/DevLogs-iOS.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DevLogs/Classes/**/*"
+  "source_files": "DevLogs/Classes/**/*",
+  "frameworks": "UIKit"
 }
