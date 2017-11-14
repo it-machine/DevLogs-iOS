@@ -1,0 +1,6 @@
+framework module DevLogs {
+  umbrella header "DevLogs-umbrella.h"
+
+  export *
+  module * { export * }
+}
