@@ -13,6 +13,14 @@
 		397F654BE02C845D702AECC49880AD65 /* Pods-DevLogs_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F00842C21D887152C2BD1F04A2B58147 /* Pods-DevLogs_Example-dummy.m */; };
 		50F59740760A0182A55779DB306CE809 /* DevLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D0DCFB3B1F2CC97869398BAEFEF717B /* DevLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D79D846409E9BBC11F6EACDAB868173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5F8EF1CE1FBB6AB800CFB500 /* ASLogService+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8EF1C61FBB6AB600CFB500 /* ASLogService+Utils.h */; };
+		5F8EF1CF1FBB6AB800CFB500 /* ASLogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EF1C71FBB6AB700CFB500 /* ASLogService.m */; };
+		5F8EF1D01FBB6AB800CFB500 /* ASLogService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8EF1C81FBB6AB700CFB500 /* ASLogService.h */; };
+		5F8EF1D11FBB6AB800CFB500 /* ASLogModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8EF1C91FBB6AB700CFB500 /* ASLogModel.h */; };
+		5F8EF1D21FBB6AB800CFB500 /* ASLogService+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EF1CA1FBB6AB700CFB500 /* ASLogService+Utils.m */; };
+		5F8EF1D31FBB6AB800CFB500 /* ASLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EF1CB1FBB6AB700CFB500 /* ASLogModel.m */; };
+		5F8EF1D41FBB6AB800CFB500 /* ASTransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8EF1CC1FBB6AB800CFB500 /* ASTransportLayer.m */; };
+		5F8EF1D51FBB6AB800CFB500 /* ASTransportLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F8EF1CD1FBB6AB800CFB500 /* ASTransportLayer.h */; };
 		876799F6A3119EA9160E31683EA03875 /* DevLogs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B9A5059175EE99E49BF85A7FB9B414 /* DevLogs-dummy.m */; };
 		94F91E8831601CFAF312EA68570222AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9DC0271562B534604707948976035683 /* Pods-DevLogs_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5E13881AE37F46A9ACEC2CA9118A3D /* Pods-DevLogs_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,25 +42,33 @@
 		13E2E15188AF3994A16A3FD0201A161E /* DevLogs-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DevLogs-prefix.pch"; sourceTree = "<group>"; };
 		1D72938F220AFA24E274CD6911AA27DB /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = DevLogs/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		27BC7CA6EFE30DE3F0B86B25086149EC /* Pods-DevLogs_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DevLogs_Tests-umbrella.h"; sourceTree = "<group>"; };
-		2C3484B21D61BEA33193A1232DE55DDC /* Pods-DevLogs_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DevLogs_Example.modulemap"; sourceTree = "<group>"; };
+		2C3484B21D61BEA33193A1232DE55DDC /* Pods-DevLogs_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DevLogs_Example.modulemap"; sourceTree = "<group>"; };
 		32B9A5059175EE99E49BF85A7FB9B414 /* DevLogs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DevLogs-dummy.m"; sourceTree = "<group>"; };
-		3AEF535BDD876B3C179EE997548990D9 /* Pods-DevLogs_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DevLogs_Tests.modulemap"; sourceTree = "<group>"; };
+		3AEF535BDD876B3C179EE997548990D9 /* Pods-DevLogs_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DevLogs_Tests.modulemap"; sourceTree = "<group>"; };
 		40E8B04E059FDBE3D95ABA61CAA8D85B /* Pods-DevLogs_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DevLogs_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4D449A2314C3D4736829E66A38179DD0 /* Pods-DevLogs_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DevLogs_Tests-dummy.m"; sourceTree = "<group>"; };
 		5B5E13881AE37F46A9ACEC2CA9118A3D /* Pods-DevLogs_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DevLogs_Example-umbrella.h"; sourceTree = "<group>"; };
-		63C045E25F8D7711A59D163FD318B735 /* DevLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DevLogs.modulemap; sourceTree = "<group>"; };
+		5F8EF1C61FBB6AB600CFB500 /* ASLogService+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASLogService+Utils.h"; path = "DevLogs/Classes/ASLogService+Utils.h"; sourceTree = "<group>"; };
+		5F8EF1C71FBB6AB700CFB500 /* ASLogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogService.m; path = DevLogs/Classes/ASLogService.m; sourceTree = "<group>"; };
+		5F8EF1C81FBB6AB700CFB500 /* ASLogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogService.h; path = DevLogs/Classes/ASLogService.h; sourceTree = "<group>"; };
+		5F8EF1C91FBB6AB700CFB500 /* ASLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogModel.h; path = DevLogs/Classes/ASLogModel.h; sourceTree = "<group>"; };
+		5F8EF1CA1FBB6AB700CFB500 /* ASLogService+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASLogService+Utils.m"; path = "DevLogs/Classes/ASLogService+Utils.m"; sourceTree = "<group>"; };
+		5F8EF1CB1FBB6AB700CFB500 /* ASLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogModel.m; path = DevLogs/Classes/ASLogModel.m; sourceTree = "<group>"; };
+		5F8EF1CC1FBB6AB800CFB500 /* ASTransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTransportLayer.m; path = DevLogs/Classes/ASTransportLayer.m; sourceTree = "<group>"; };
+		5F8EF1CD1FBB6AB800CFB500 /* ASTransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTransportLayer.h; path = DevLogs/Classes/ASTransportLayer.h; sourceTree = "<group>"; };
+		63C045E25F8D7711A59D163FD318B735 /* DevLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DevLogs.modulemap; sourceTree = "<group>"; };
 		64B91DFDC9238DFF1DFEEF2F082AEE87 /* Pods-DevLogs_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DevLogs_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		69D9FCA8688A31488559393FBA1BAD18 /* Pods-DevLogs_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DevLogs_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7273674846E65EC81CBFE665F34032FD /* Pods_DevLogs_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DevLogs_Example.framework; path = "Pods-DevLogs_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7273674846E65EC81CBFE665F34032FD /* Pods_DevLogs_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevLogs_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7274C746E3CBAE0545B0581307AD640E /* Pods-DevLogs_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DevLogs_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7A57AC07406508F76DD173F154883951 /* Pods-DevLogs_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DevLogs_Example-resources.sh"; sourceTree = "<group>"; };
-		7D2AF961DAADD125BC4C08A55341C1B3 /* DevLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DevLogs.framework; path = DevLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2AF961DAADD125BC4C08A55341C1B3 /* DevLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DCFB04F967F27265C7E1EAFABE7354D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C286FE1B6EB5050AF94BB7A525F4134 /* Pods-DevLogs_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DevLogs_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9D0DCFB3B1F2CC97869398BAEFEF717B /* DevLogs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DevLogs-umbrella.h"; sourceTree = "<group>"; };
-		BAD3B24E7140D52CE5943B1678CA53FD /* Pods_DevLogs_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DevLogs_Tests.framework; path = "Pods-DevLogs_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD3B24E7140D52CE5943B1678CA53FD /* Pods_DevLogs_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevLogs_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD0560258621E24090036956D8317A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4B8E187D1F48746DF28DE5FD289D358 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6C712B83077B56DAF98B01263432BE /* Pods-DevLogs_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DevLogs_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +111,14 @@
 		25A8E142ED64F827DB9C2DEC8E2E661B /* DevLogs */ = {
 			isa = PBXGroup;
 			children = (
+				5F8EF1C91FBB6AB700CFB500 /* ASLogModel.h */,
+				5F8EF1CB1FBB6AB700CFB500 /* ASLogModel.m */,
+				5F8EF1C81FBB6AB700CFB500 /* ASLogService.h */,
+				5F8EF1C71FBB6AB700CFB500 /* ASLogService.m */,
+				5F8EF1C61FBB6AB600CFB500 /* ASLogService+Utils.h */,
+				5F8EF1CA1FBB6AB700CFB500 /* ASLogService+Utils.m */,
+				5F8EF1CD1FBB6AB800CFB500 /* ASTransportLayer.h */,
+				5F8EF1CC1FBB6AB800CFB500 /* ASTransportLayer.m */,
 				1D72938F220AFA24E274CD6911AA27DB /* ReplaceMe.m */,
 				52E6A3531BC48B8B39ACC540F68F7925 /* Support Files */,
 			);
@@ -229,7 +253,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8EF1D01FBB6AB800CFB500 /* ASLogService.h in Headers */,
+				5F8EF1D11FBB6AB800CFB500 /* ASLogModel.h in Headers */,
+				5F8EF1D51FBB6AB800CFB500 /* ASTransportLayer.h in Headers */,
 				50F59740760A0182A55779DB306CE809 /* DevLogs-umbrella.h in Headers */,
+				5F8EF1CE1FBB6AB800CFB500 /* ASLogService+Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				876799F6A3119EA9160E31683EA03875 /* DevLogs-dummy.m in Sources */,
+				5F8EF1CF1FBB6AB800CFB500 /* ASLogService.m in Sources */,
+				5F8EF1D21FBB6AB800CFB500 /* ASLogService+Utils.m in Sources */,
+				5F8EF1D41FBB6AB800CFB500 /* ASTransportLayer.m in Sources */,
 				387DD0F81F9EF9046BD1F7C182313E1A /* ReplaceMe.m in Sources */,
+				5F8EF1D31FBB6AB800CFB500 /* ASLogModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
