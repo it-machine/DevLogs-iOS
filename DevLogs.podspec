@@ -25,7 +25,7 @@ A short description of DevLogs. Nothing else
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'nordsmallcountry' => 'as@it-machine.ru' }
-  s.source           = { :git => 'https://github.com/it-machine/DevLogs-iOS.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/it-machine/DevLogs-iOS.git',:branch => "master" ,:tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
