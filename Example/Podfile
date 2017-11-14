@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DevLogs_Example' do
+  pod 'DevLogs', :path => '../'
+
+  target 'DevLogs_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
