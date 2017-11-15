@@ -12,11 +12,15 @@
 #import <AVFoundation/AVFoundation.h>
 
 
+
 typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseStatus status);
 
 @interface ASLogService()
+
 @property(nonatomic) NSDate* lastClickDate;
-@property(nonatomic)BOOL responseInProgress;
+@property(nonatomic) BOOL responseInProgress;
+
+
 @end
 
 @implementation ASLogService
@@ -47,15 +51,25 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
 
 
 -(void)addLog:(ASLogModel*)model{
+    
+    if(!self.config.loggingEnabled){
+        return;
+    }
+    
      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
          [self receiveLog:model];
      });
 }
 
 -(void)sendLogs{
+    
+    if(!self.config.loggingEnabled){
+        return;
+    }
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NSMutableURLRequest* request = [self createRequest];
+        NSMutableURLRequest* request = [self createRequest:self.config];
     
         if(!request){
             self.responseInProgress = NO;
@@ -73,6 +87,9 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
+    if(!self.config.loggingEnabled){
+        return;
+    }
     
     if ([keyPath isEqual:@"outputVolume"]) {
         if(!self.lastClickDate){
@@ -89,7 +106,6 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
         }
         
          self.lastClickDate = [NSDate date];
-       
     }
 }
 

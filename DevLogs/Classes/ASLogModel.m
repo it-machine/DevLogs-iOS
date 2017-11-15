@@ -12,6 +12,8 @@
 @end
 @implementation ASLogModel
 
+
+
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (!self) {
@@ -34,6 +36,16 @@
     [encoder encodeObject:self.apiMethod forKey:@"apiMethod"];
     [encoder encodeObject:self.url forKey:@"url"];
     [encoder encodeObject:self.info forKey:@"info"];
+}
+
+-(instancetype)initWithUrl:(NSString*)url responseBody:(NSString*)responseBody info:(NSString*)info{
+    self = [super init];
+    if(self){
+        self.url = url;
+        self.responseBody = responseBody;
+        self.info = info;
+    }
+    return self;
 }
 
 - (NSString *)description {

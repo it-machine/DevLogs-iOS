@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ASLogModel.h"
+#import "ASLogConfig.h"
 
 @interface ASLogService : NSObject
 
 + (instancetype)sharedInstance;
+
+@property(nonatomic) ASLogConfig* config;
 
 -(void)addLog:(ASLogModel*)model;
 -(void)sendLogs;

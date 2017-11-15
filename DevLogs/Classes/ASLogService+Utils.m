@@ -92,7 +92,7 @@ static NSString* logFileName = @"outputLogs.txt";
 #pragma -
 #pragma mark - API
 
--(NSMutableURLRequest*)createRequest{
+-(NSMutableURLRequest*)createRequest:(ASLogConfig*)config{
 #pragma - 1
     //creating Components
     
@@ -105,9 +105,10 @@ static NSString* logFileName = @"outputLogs.txt";
     
     NSURLQueryItem* itemBody = [[NSURLQueryItem alloc]initWithName:@"body" value:content];
     
+
     
-    NSURLQueryItem* itemUserToken = [[NSURLQueryItem alloc]initWithName:@"user_token" value:@"HpQ8VA3dAhuJrYwvCjGxD5ie"];
-    NSURLQueryItem* itemAppToken = [[NSURLQueryItem alloc]initWithName:@"app_token" value:@"ip4p7zAH9mN4g26P7jEPTKMc"];
+    NSURLQueryItem* itemUserToken = [[NSURLQueryItem alloc]initWithName:@"user_token" value:config.user_token];
+    NSURLQueryItem* itemAppToken = [[NSURLQueryItem alloc]initWithName:@"app_token" value:config.app_token];
     NSURLQueryItem* itemPlatform = [[NSURLQueryItem alloc]initWithName:@"platform_id" value:@"1"];
     
     NSURLQueryItem* itemOSVersion = [[NSURLQueryItem alloc]initWithName:@"platform_version" value:[NSString stringWithFormat:@"%@(%@)",[[UIDevice currentDevice] systemName], [[UIDevice currentDevice] systemVersion]]];

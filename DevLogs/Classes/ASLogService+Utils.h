@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ASLogService.h"
 #import "ASLogModel.h"
+#import "ASLogConfig.h"
 
 @interface ASLogService(Utils)
 
@@ -16,6 +17,6 @@
 -(void)deleteLogs;
 -(NSString*)getContent;
 
--(NSMutableURLRequest*)createRequest;
+-(NSMutableURLRequest*)createRequest:(ASLogConfig*)config;
 
 @end
