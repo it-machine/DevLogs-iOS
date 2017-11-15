@@ -9,7 +9,7 @@
 #import "ASLogService.h"
 #import "ASLogService+Utils.h"
 #import "ASTransportLayer.h"
-#import <AVFoundation/AVFoundation.h>
+#import <AVFoundation/AVFoundation.h> 
 
 
 
@@ -67,6 +67,8 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
         return;
     }
     
+    [self startIndicator];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSMutableURLRequest* request = [self createRequest:self.config];
@@ -84,6 +86,8 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
         }];
     });
 }
+
+
 
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
@@ -107,6 +111,17 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
         
          self.lastClickDate = [NSDate date];
     }
+}
+
+
+#pragma Indicator
+-(void)startIndicator{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
+    [self performSelector:@selector(hideIndicator) withObject:nil afterDelay:2];
+}
+
+-(void)hideIndicator{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
 }
 
 @end

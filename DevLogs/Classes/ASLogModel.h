@@ -9,16 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface ASLogModel : NSObject
-@property(nonatomic)NSDate* date;
-@property(nonatomic)NSString* responseBody;
-@property(nonatomic)NSString* apiMethod;
-@property(nonatomic)NSString* url;
-@property(nonatomic)NSString* info;
+
+@property(nonatomic)NSString* name;
+@property(nonatomic)NSString* value;
+
 
 
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)decoder;
 
--(instancetype)initWithUrl:(NSString*)url responseBody:(NSString*)responseBody info:(NSString*)info;
+-(instancetype)initWithName:(NSString*)name value:(NSString*)value;
 
 @end

@@ -146,19 +146,4 @@ static NSString* logFileName = @"outputLogs.txt";
 }
 
 
--(NSString*)formatLog:(NSString*)log{
-    
-    log = [NSString stringWithFormat:@"%@\r", log];
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:[NSDate date]]];
-    
-    NSMutableString* mutString = [[NSMutableString alloc]initWithString:stringDate];
-   
-    [mutString appendString:log];
-    
-    return mutString;
-}
-
 @end

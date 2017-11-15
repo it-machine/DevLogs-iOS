@@ -13,37 +13,28 @@
 @implementation ASLogModel
 
 
-
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (!self) {
         return nil;
     }
 
-    
-    self.date = [decoder decodeObjectForKey:@"date"];
-    self.responseBody = [decoder decodeObjectForKey:@"responseBody"];
-    self.apiMethod = [decoder decodeObjectForKey:@"apiMethod"];
-    self.url = [decoder decodeObjectForKey:@"url"];
-    self.info = [decoder decodeObjectForKey:@"info"];
+    self.name = [decoder decodeObjectForKey:@"name"];
+    self.value = [decoder decodeObjectForKey:@"value"];
     
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    [encoder encodeObject:self.date forKey:@"date"];
-    [encoder encodeObject:self.responseBody forKey:@"responseBody"];
-    [encoder encodeObject:self.apiMethod forKey:@"apiMethod"];
-    [encoder encodeObject:self.url forKey:@"url"];
-    [encoder encodeObject:self.info forKey:@"info"];
+    [encoder encodeObject:self.name forKey:@"name"];
+    [encoder encodeObject:self.value forKey:@"value"];
 }
 
--(instancetype)initWithUrl:(NSString*)url responseBody:(NSString*)responseBody info:(NSString*)info{
+-(instancetype)initWithName:(NSString*)name value:(NSString*)value{
     self = [super init];
     if(self){
-        self.url = url;
-        self.responseBody = responseBody;
-        self.info = info;
+        self.name = name;
+        self.value = value;
     }
     return self;
 }
@@ -52,9 +43,9 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:self.date]];
+    NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:[NSDate date]]];
     
-    NSString *descriptionString = [NSString stringWithFormat:@"date: %@\rquery_url: %@\rinfo: %@\rjson_body: %@", stringDate, self.url, self.info, self.responseBody];
+    NSString *descriptionString = [NSString stringWithFormat:@"date: %@\rname: %@\rvalue: %@", stringDate, self.name, self.value];
     return descriptionString;
 }
 
