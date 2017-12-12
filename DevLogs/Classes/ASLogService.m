@@ -12,6 +12,8 @@
 
 
 @interface ASLogService()
+@property (nonatomic) NSOperationQueue* aQueue;
+
 @end
 
 @implementation ASLogService
@@ -27,6 +29,14 @@
     return obj;
 }
 
+-(instancetype)init{
+    self = [super init];
+    if(self){
+        self.aQueue = [[NSOperationQueue alloc] init];
+    }
+    return self;
+}
+
 
 -(void)addLog:(ASLogModel*)model{
     
@@ -34,13 +44,28 @@
         return;
     }
     
-     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-         [self receiveLog:model];
-         [self sendLogs];
-     });
+    self.aQueue.maxConcurrentOperationCount = 1;
+    
+    [self.aQueue addOperationWithBlock:^{
+    
+        [self receiveLog:model];
+        
+        __block BOOL isUploaded;
+        [self sendLogs:^(ASTransportResponseStatus status) {
+            
+            isUploaded = true;
+        }];
+        
+
+        while (!isUploaded)
+        {
+            [NSThread sleepForTimeInterval:1.0f];
+        }
+        
+    }];
 }
 
--(void)sendLogs{
+-(void)sendLogs:(ASLogServiceComplete)complete{
     
     if(!self.config.loggingEnabled){
         return;
@@ -58,6 +83,7 @@
         if(status == ASTransportResponseStatusSuccess){
             [self deleteLogs];
         }
+        complete(status);
         
     }];
 }

@@ -10,6 +10,14 @@
 
 @implementation ASLogModel
 
+-(instancetype)init{
+    self = [super init];
+    if(self){
+        self.date = [self getCurrentDate];
+    }
+    return self;
+}
+
 - (id)initWithCoder:(NSCoder *)decoder
 {
     self = [super init];
@@ -19,6 +27,7 @@
 
     self.name = [decoder decodeObjectForKey:@"name"];
     self.code = [decoder decodeObjectForKey:@"code"];
+    self.date = [decoder decodeObjectForKey:@"date"];
     self.info = [decoder decodeObjectForKey:@"info"];
     self.response = [decoder decodeObjectForKey:@"response"];
     
@@ -29,17 +38,21 @@
 {
     [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.code forKey:@"code"];
+    [encoder encodeObject:self.date forKey:@"date"];
     [encoder encodeObject:self.info forKey:@"info"];
     [encoder encodeObject:self.response forKey:@"response"];
+}
+
+-(NSString*)getCurrentDate{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:[NSDate date]]];
+    return stringDate;
 }
 
 
 - (NSString *)description
 {
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:[NSDate date]]];
     
     NSMutableString* mutString = [NSMutableString new];
     
@@ -55,8 +68,8 @@
         [mutString appendString:[NSString stringWithFormat:@"info: %@\r", self.info]];
     }
     
-    if(stringDate){
-        [mutString appendString:[NSString stringWithFormat:@"date: %@\r", stringDate]];
+    if(self.date){
+        [mutString appendString:[NSString stringWithFormat:@"date: %@\r", self.date]];
     }
     
     if(self.response){

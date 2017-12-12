@@ -13,16 +13,16 @@
 		397F654BE02C845D702AECC49880AD65 /* Pods-DevLogs_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F00842C21D887152C2BD1F04A2B58147 /* Pods-DevLogs_Example-dummy.m */; };
 		50F59740760A0182A55779DB306CE809 /* DevLogs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D0DCFB3B1F2CC97869398BAEFEF717B /* DevLogs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D79D846409E9BBC11F6EACDAB868173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5F00F7DB1FDFF05700CB0BDC /* ASLogService+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7D11FDFF05500CB0BDC /* ASLogService+Utils.h */; };
-		5F00F7DC1FDFF05700CB0BDC /* ASLogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7D21FDFF05500CB0BDC /* ASLogService.m */; };
-		5F00F7DD1FDFF05700CB0BDC /* ASLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7D31FDFF05600CB0BDC /* ASLogConfig.m */; };
-		5F00F7DE1FDFF05700CB0BDC /* ASLogModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7D41FDFF05600CB0BDC /* ASLogModel.h */; };
-		5F00F7DF1FDFF05700CB0BDC /* ASLogService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7D51FDFF05600CB0BDC /* ASLogService.h */; };
-		5F00F7E01FDFF05700CB0BDC /* ASLogService+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7D61FDFF05600CB0BDC /* ASLogService+Utils.m */; };
-		5F00F7E11FDFF05700CB0BDC /* ASLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7D71FDFF05600CB0BDC /* ASLogModel.m */; };
-		5F00F7E21FDFF05700CB0BDC /* ASTransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7D81FDFF05600CB0BDC /* ASTransportLayer.m */; };
-		5F00F7E31FDFF05700CB0BDC /* ASLogConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7D91FDFF05600CB0BDC /* ASLogConfig.h */; };
-		5F00F7E41FDFF05700CB0BDC /* ASTransportLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7DA1FDFF05700CB0BDC /* ASTransportLayer.h */; };
+		5F00F7EF1FE01F0300CB0BDC /* ASLogService+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7E51FE01F0100CB0BDC /* ASLogService+Utils.h */; };
+		5F00F7F01FE01F0300CB0BDC /* ASLogService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7E61FE01F0100CB0BDC /* ASLogService.m */; };
+		5F00F7F11FE01F0300CB0BDC /* ASLogConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7E71FE01F0100CB0BDC /* ASLogConfig.m */; };
+		5F00F7F21FE01F0300CB0BDC /* ASLogModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7E81FE01F0100CB0BDC /* ASLogModel.h */; };
+		5F00F7F31FE01F0300CB0BDC /* ASLogService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7E91FE01F0200CB0BDC /* ASLogService.h */; };
+		5F00F7F41FE01F0300CB0BDC /* ASLogService+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7EA1FE01F0200CB0BDC /* ASLogService+Utils.m */; };
+		5F00F7F51FE01F0300CB0BDC /* ASLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7EB1FE01F0200CB0BDC /* ASLogModel.m */; };
+		5F00F7F61FE01F0300CB0BDC /* ASTransportLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F7EC1FE01F0200CB0BDC /* ASTransportLayer.m */; };
+		5F00F7F71FE01F0300CB0BDC /* ASLogConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7ED1FE01F0200CB0BDC /* ASLogConfig.h */; };
+		5F00F7F81FE01F0300CB0BDC /* ASTransportLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F00F7EE1FE01F0300CB0BDC /* ASTransportLayer.h */; };
 		876799F6A3119EA9160E31683EA03875 /* DevLogs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B9A5059175EE99E49BF85A7FB9B414 /* DevLogs-dummy.m */; };
 		94F91E8831601CFAF312EA68570222AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9DC0271562B534604707948976035683 /* Pods-DevLogs_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5E13881AE37F46A9ACEC2CA9118A3D /* Pods-DevLogs_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,16 +50,16 @@
 		40E8B04E059FDBE3D95ABA61CAA8D85B /* Pods-DevLogs_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DevLogs_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4D449A2314C3D4736829E66A38179DD0 /* Pods-DevLogs_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DevLogs_Tests-dummy.m"; sourceTree = "<group>"; };
 		5B5E13881AE37F46A9ACEC2CA9118A3D /* Pods-DevLogs_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DevLogs_Example-umbrella.h"; sourceTree = "<group>"; };
-		5F00F7D11FDFF05500CB0BDC /* ASLogService+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASLogService+Utils.h"; path = "DevLogs/Classes/ASLogService+Utils.h"; sourceTree = "<group>"; };
-		5F00F7D21FDFF05500CB0BDC /* ASLogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogService.m; path = DevLogs/Classes/ASLogService.m; sourceTree = "<group>"; };
-		5F00F7D31FDFF05600CB0BDC /* ASLogConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogConfig.m; path = DevLogs/Classes/ASLogConfig.m; sourceTree = "<group>"; };
-		5F00F7D41FDFF05600CB0BDC /* ASLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogModel.h; path = DevLogs/Classes/ASLogModel.h; sourceTree = "<group>"; };
-		5F00F7D51FDFF05600CB0BDC /* ASLogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogService.h; path = DevLogs/Classes/ASLogService.h; sourceTree = "<group>"; };
-		5F00F7D61FDFF05600CB0BDC /* ASLogService+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASLogService+Utils.m"; path = "DevLogs/Classes/ASLogService+Utils.m"; sourceTree = "<group>"; };
-		5F00F7D71FDFF05600CB0BDC /* ASLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogModel.m; path = DevLogs/Classes/ASLogModel.m; sourceTree = "<group>"; };
-		5F00F7D81FDFF05600CB0BDC /* ASTransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTransportLayer.m; path = DevLogs/Classes/ASTransportLayer.m; sourceTree = "<group>"; };
-		5F00F7D91FDFF05600CB0BDC /* ASLogConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogConfig.h; path = DevLogs/Classes/ASLogConfig.h; sourceTree = "<group>"; };
-		5F00F7DA1FDFF05700CB0BDC /* ASTransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTransportLayer.h; path = DevLogs/Classes/ASTransportLayer.h; sourceTree = "<group>"; };
+		5F00F7E51FE01F0100CB0BDC /* ASLogService+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASLogService+Utils.h"; path = "DevLogs/Classes/ASLogService+Utils.h"; sourceTree = "<group>"; };
+		5F00F7E61FE01F0100CB0BDC /* ASLogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogService.m; path = DevLogs/Classes/ASLogService.m; sourceTree = "<group>"; };
+		5F00F7E71FE01F0100CB0BDC /* ASLogConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogConfig.m; path = DevLogs/Classes/ASLogConfig.m; sourceTree = "<group>"; };
+		5F00F7E81FE01F0100CB0BDC /* ASLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogModel.h; path = DevLogs/Classes/ASLogModel.h; sourceTree = "<group>"; };
+		5F00F7E91FE01F0200CB0BDC /* ASLogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogService.h; path = DevLogs/Classes/ASLogService.h; sourceTree = "<group>"; };
+		5F00F7EA1FE01F0200CB0BDC /* ASLogService+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASLogService+Utils.m"; path = "DevLogs/Classes/ASLogService+Utils.m"; sourceTree = "<group>"; };
+		5F00F7EB1FE01F0200CB0BDC /* ASLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASLogModel.m; path = DevLogs/Classes/ASLogModel.m; sourceTree = "<group>"; };
+		5F00F7EC1FE01F0200CB0BDC /* ASTransportLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASTransportLayer.m; path = DevLogs/Classes/ASTransportLayer.m; sourceTree = "<group>"; };
+		5F00F7ED1FE01F0200CB0BDC /* ASLogConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASLogConfig.h; path = DevLogs/Classes/ASLogConfig.h; sourceTree = "<group>"; };
+		5F00F7EE1FE01F0300CB0BDC /* ASTransportLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASTransportLayer.h; path = DevLogs/Classes/ASTransportLayer.h; sourceTree = "<group>"; };
 		63C045E25F8D7711A59D163FD318B735 /* DevLogs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DevLogs.modulemap; sourceTree = "<group>"; };
 		64B91DFDC9238DFF1DFEEF2F082AEE87 /* Pods-DevLogs_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DevLogs_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,16 +115,16 @@
 		25A8E142ED64F827DB9C2DEC8E2E661B /* DevLogs */ = {
 			isa = PBXGroup;
 			children = (
-				5F00F7D91FDFF05600CB0BDC /* ASLogConfig.h */,
-				5F00F7D31FDFF05600CB0BDC /* ASLogConfig.m */,
-				5F00F7D41FDFF05600CB0BDC /* ASLogModel.h */,
-				5F00F7D71FDFF05600CB0BDC /* ASLogModel.m */,
-				5F00F7D51FDFF05600CB0BDC /* ASLogService.h */,
-				5F00F7D21FDFF05500CB0BDC /* ASLogService.m */,
-				5F00F7D11FDFF05500CB0BDC /* ASLogService+Utils.h */,
-				5F00F7D61FDFF05600CB0BDC /* ASLogService+Utils.m */,
-				5F00F7DA1FDFF05700CB0BDC /* ASTransportLayer.h */,
-				5F00F7D81FDFF05600CB0BDC /* ASTransportLayer.m */,
+				5F00F7ED1FE01F0200CB0BDC /* ASLogConfig.h */,
+				5F00F7E71FE01F0100CB0BDC /* ASLogConfig.m */,
+				5F00F7E81FE01F0100CB0BDC /* ASLogModel.h */,
+				5F00F7EB1FE01F0200CB0BDC /* ASLogModel.m */,
+				5F00F7E91FE01F0200CB0BDC /* ASLogService.h */,
+				5F00F7E61FE01F0100CB0BDC /* ASLogService.m */,
+				5F00F7E51FE01F0100CB0BDC /* ASLogService+Utils.h */,
+				5F00F7EA1FE01F0200CB0BDC /* ASLogService+Utils.m */,
+				5F00F7EE1FE01F0300CB0BDC /* ASTransportLayer.h */,
+				5F00F7EC1FE01F0200CB0BDC /* ASTransportLayer.m */,
 				1D72938F220AFA24E274CD6911AA27DB /* ReplaceMe.m */,
 				52E6A3531BC48B8B39ACC540F68F7925 /* Support Files */,
 			);
@@ -260,11 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F59740760A0182A55779DB306CE809 /* DevLogs-umbrella.h in Headers */,
-				5F00F7DB1FDFF05700CB0BDC /* ASLogService+Utils.h in Headers */,
-				5F00F7E41FDFF05700CB0BDC /* ASTransportLayer.h in Headers */,
-				5F00F7DE1FDFF05700CB0BDC /* ASLogModel.h in Headers */,
-				5F00F7DF1FDFF05700CB0BDC /* ASLogService.h in Headers */,
-				5F00F7E31FDFF05700CB0BDC /* ASLogConfig.h in Headers */,
+				5F00F7EF1FE01F0300CB0BDC /* ASLogService+Utils.h in Headers */,
+				5F00F7F81FE01F0300CB0BDC /* ASTransportLayer.h in Headers */,
+				5F00F7F21FE01F0300CB0BDC /* ASLogModel.h in Headers */,
+				5F00F7F31FE01F0300CB0BDC /* ASLogService.h in Headers */,
+				5F00F7F71FE01F0300CB0BDC /* ASLogConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,13 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F00F7E11FDFF05700CB0BDC /* ASLogModel.m in Sources */,
-				5F00F7DD1FDFF05700CB0BDC /* ASLogConfig.m in Sources */,
+				5F00F7F51FE01F0300CB0BDC /* ASLogModel.m in Sources */,
+				5F00F7F11FE01F0300CB0BDC /* ASLogConfig.m in Sources */,
 				876799F6A3119EA9160E31683EA03875 /* DevLogs-dummy.m in Sources */,
-				5F00F7DC1FDFF05700CB0BDC /* ASLogService.m in Sources */,
-				5F00F7E01FDFF05700CB0BDC /* ASLogService+Utils.m in Sources */,
+				5F00F7F01FE01F0300CB0BDC /* ASLogService.m in Sources */,
+				5F00F7F41FE01F0300CB0BDC /* ASLogService+Utils.m in Sources */,
 				387DD0F81F9EF9046BD1F7C182313E1A /* ReplaceMe.m in Sources */,
-				5F00F7E21FDFF05700CB0BDC /* ASTransportLayer.m in Sources */,
+				5F00F7F61FE01F0300CB0BDC /* ASTransportLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

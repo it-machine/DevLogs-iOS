@@ -12,6 +12,7 @@
 
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSString* code;
+@property (nonatomic) NSString* date;
 @property (nonatomic) NSString* info;
 @property (nonatomic) NSString* response;
 

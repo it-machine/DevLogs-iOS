@@ -11,7 +11,7 @@
 #import "ASLogConfig.h"
 #import "ASTransportLayer.h"
 
-typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseStatus status);
+typedef void(^ASLogServiceComplete)(ASTransportResponseStatus status);
 
 @interface ASLogService : NSObject
 
@@ -20,7 +20,6 @@ typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseSt
 @property(nonatomic) ASLogConfig* config;
 
 -(void)addLog:(ASLogModel*)model;
--(void)sendLogs;
 
 
 @end
