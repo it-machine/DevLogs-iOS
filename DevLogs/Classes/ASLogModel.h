@@ -10,14 +10,12 @@
 
 @interface ASLogModel : NSObject
 
-@property(nonatomic)NSString* name;
-@property(nonatomic)NSString* value;
-
-
+@property (nonatomic) NSString* name;
+@property (nonatomic) NSString* code;
+@property (nonatomic) NSString* info;
+@property (nonatomic) NSString* response;
 
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)decoder;
-
--(instancetype)initWithName:(NSString*)name value:(NSString*)value;
 
 @end

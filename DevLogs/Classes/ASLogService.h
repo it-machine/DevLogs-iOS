@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "ASLogModel.h"
 #import "ASLogConfig.h"
+#import "ASTransportLayer.h"
+
+typedef void(^LogServiceResponse)(NSDictionary*dicReponse, ASTransportResponseStatus status);
 
 @interface ASLogService : NSObject
 

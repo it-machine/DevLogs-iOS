@@ -8,45 +8,62 @@
 
 #import "ASLogModel.h"
 
-@interface ASLogModel()<NSCoding>
-@end
 @implementation ASLogModel
 
-
-- (id)initWithCoder:(NSCoder *)decoder {
+- (id)initWithCoder:(NSCoder *)decoder
+{
     self = [super init];
     if (!self) {
         return nil;
     }
 
     self.name = [decoder decodeObjectForKey:@"name"];
-    self.value = [decoder decodeObjectForKey:@"value"];
+    self.code = [decoder decodeObjectForKey:@"code"];
+    self.info = [decoder decodeObjectForKey:@"info"];
+    self.response = [decoder decodeObjectForKey:@"response"];
     
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)encoder {
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
     [encoder encodeObject:self.name forKey:@"name"];
-    [encoder encodeObject:self.value forKey:@"value"];
+    [encoder encodeObject:self.code forKey:@"code"];
+    [encoder encodeObject:self.info forKey:@"info"];
+    [encoder encodeObject:self.response forKey:@"response"];
 }
 
--(instancetype)initWithName:(NSString*)name value:(NSString*)value{
-    self = [super init];
-    if(self){
-        self.name = name;
-        self.value = value;
-    }
-    return self;
-}
 
-- (NSString *)description {
+- (NSString *)description
+{
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *stringDate = [NSString stringWithFormat:@"[%@] ", [dateFormatter stringFromDate:[NSDate date]]];
     
-    NSString *descriptionString = [NSString stringWithFormat:@"date: %@\rname: %@\rvalue: %@", stringDate, self.name, self.value];
-    return descriptionString;
+    NSMutableString* mutString = [NSMutableString new];
+    
+    if(self.name){
+        [mutString appendString:[NSString stringWithFormat:@"name: %@\r", self.name]];
+    }
+    
+    if(self.code){
+        [mutString appendString:[NSString stringWithFormat:@"code: %@\r", self.code]];
+    }
+    
+    if(self.info){
+        [mutString appendString:[NSString stringWithFormat:@"info: %@\r", self.info]];
+    }
+    
+    if(stringDate){
+        [mutString appendString:[NSString stringWithFormat:@"date: %@\r", stringDate]];
+    }
+    
+    if(self.response){
+        [mutString appendString:[NSString stringWithFormat:@"response: %@\r\r", self.response]];
+    }
+    
+    return mutString;
 }
 
 
