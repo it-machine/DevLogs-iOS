@@ -29,6 +29,7 @@
     self.code = [decoder decodeObjectForKey:@"code"];
     self.date = [decoder decodeObjectForKey:@"date"];
     self.info = [decoder decodeObjectForKey:@"info"];
+    self.httpBody = [decoder decodeObjectForKey:@"httpBody"];
     self.response = [decoder decodeObjectForKey:@"response"];
     
     return self;
@@ -40,6 +41,7 @@
     [encoder encodeObject:self.code forKey:@"code"];
     [encoder encodeObject:self.date forKey:@"date"];
     [encoder encodeObject:self.info forKey:@"info"];
+    [encoder encodeObject:self.httpBody forKey:@"httpBody"];
     [encoder encodeObject:self.response forKey:@"response"];
 }
 
@@ -50,29 +52,38 @@
     return stringDate;
 }
 
+-(NSString*)getStringFromHttpBody:(NSData*)httpBody{
+    NSString* bodyStr = [[NSString alloc]initWithData:httpBody encoding:NSUTF8StringEncoding];
+    return bodyStr;
+}
+
 
 - (NSString *)description
 {
     
     NSMutableString* mutString = [NSMutableString new];
     
-    if(self.name){
+    if(self.name && self.name.length>0){
         [mutString appendString:[NSString stringWithFormat:@"name: %@\r", self.name]];
     }
     
-    if(self.code){
+    if(self.code && self.code.length>0){
         [mutString appendString:[NSString stringWithFormat:@"code: %@\r", self.code]];
     }
     
-    if(self.info){
+    if(self.info && self.info.length>0){
         [mutString appendString:[NSString stringWithFormat:@"info: %@\r", self.info]];
     }
     
-    if(self.date){
+    if(self.date && self.date.length>0){
         [mutString appendString:[NSString stringWithFormat:@"date: %@\r", self.date]];
     }
     
-    if(self.response){
+    if(self.httpBody && self.httpBody.length>0){
+        [mutString appendString:[NSString stringWithFormat:@"httpBody: %@\r", self.httpBody]];
+    }
+    
+    if(self.response && self.response.length>0){
         [mutString appendString:[NSString stringWithFormat:@"response: %@\r\r", self.response]];
     }
     

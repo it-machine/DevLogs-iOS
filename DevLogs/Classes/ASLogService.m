@@ -10,7 +10,6 @@
 #import "ASLogService+Utils.h"
 #import <UIKit/UIKit.h>
 
-
 @interface ASLogService()
 @property (nonatomic) NSOperationQueue* aQueue;
 

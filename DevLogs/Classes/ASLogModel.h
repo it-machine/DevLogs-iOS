@@ -14,9 +14,12 @@
 @property (nonatomic) NSString* code;
 @property (nonatomic) NSString* date;
 @property (nonatomic) NSString* info;
+@property (nonatomic) NSString* httpBody;
 @property (nonatomic) NSString* response;
 
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)decoder;
+
+-(NSString*)getStringFromHttpBody:(NSData*)httpBody;
 
 @end
